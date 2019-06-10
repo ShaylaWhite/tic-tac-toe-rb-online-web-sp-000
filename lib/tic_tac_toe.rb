@@ -1,9 +1,10 @@
+
 # #### `WIN_COMBINATIONS`
 # Define a constant in `lib/tic_tac_toe.rb` `WIN_COMBINATIONS` and set it equal to a nested array filled with the
 # index values for the various win combinations in tic tac toe.
 #
 WIN_COMBINATIONS =
-[[0,1,2],
+[0,1,2],
 [3,4,5],
 [6,7,8],
 [0,3,6],
@@ -60,6 +61,7 @@ end
 # 1. Present on the game board.
 # 2. Not already filled with a token.
 #Check for whether the input is a valid move
+
 def valid_move?(board, index)
 index.between?(0,8) && !position_taken?(board, index)
 end
@@ -180,8 +182,7 @@ def draw?(board)
   won?(board) == nil && full?(board) == true
 end
 
-# #### `#over?`
-# Build a method `#over?` that accepts a board and returns true if the board has been won, is a draw, or is full.
+
 def over?(board)
   draw?(board) == true || won?(board) != nil
 end
